@@ -1,0 +1,11 @@
+db:
+  image: postgres:9.6
+  ports:
+      - "5432:5432"
+  volumes:
+      - db_data:/var/lib/postgresql/data/pgdata
+  environment:
+      PGDATA: /var/lib/postgresql/data/pgdata  
+      POSTGRES_USER: mydb # postgres user
+      POSTGRES_DB: mydb # postgres db name
+      POSTGRES_PASSWORD: XXX # postgres password  
